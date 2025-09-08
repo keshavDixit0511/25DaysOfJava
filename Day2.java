@@ -1,4 +1,4 @@
-import java.lang.reflect.Method;
+
 import java.util.Scanner;
 
 public class Day2 {
@@ -17,7 +17,7 @@ public class Day2 {
 
         // Strings are array of characters. They are immutable (cannot be changed) because they are stored in string pool. If we try to change a string, a new object is created in heap memory that is not in string pool.
         // String methods
-        // System.out.println(s1.length()); //4
+        System.out.println(s1.length()); //4
         // System.out.println(s1.charAt(1)); //a
         // System.out.println(s1.concat(" is a programming language")); //java is a programming language
         // System.out.println(s1.contains("ava")); //true

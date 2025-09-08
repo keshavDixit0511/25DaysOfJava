@@ -9,13 +9,13 @@ public class Day1 {
         // double celsius = (farenheit - 32)/ 1.8;
         // System.out.printf("Temperature in Celsius: %.2f", celsius);
         //Ques: 2 : write a program to print prime numbers between 1 to n.
-        // System.out.println("Enter a number till there you want to check prime numbers");
-        // int n = sc.nextInt();
-        // for (int i = 2; i <= n; i++) {
-        //     if (isPrime(i)) {
-        //         System.out.print(i + " ");
-        //     }
-        // }
+        System.out.println("Enter a number till there you want to check prime numbers");
+        int n = sc.nextInt();
+        for (int i = 2; i <= n; i++) {
+            if (isPrime(i)) {
+                System.out.print(i + " ");
+            }
+        }
         //Ques: 3 : Write a program to print factorial of a number using loop.
         //Ques: 4 : write a program to reverse a number.
         //Ques: 5 : Write a program to check palindrom string.
