@@ -134,6 +134,45 @@ public class Day18 {
         }
     }
 
+    public static void maxHeapify(int arr[], int i, int size){
+        int left = 2 * i + 1;
+        int right = 2 * i + 2;
+        int maxIndex = i;
+
+        if(left < size && arr[left] > arr[maxIndex]){
+            maxIndex = left;
+        }
+
+        if (right < size && arr[right] > arr[maxIndex]) {
+            maxIndex = right;
+        }
+
+
+        if (maxIndex != i) {
+            int temp = arr[i];
+            arr[i] = arr[maxIndex];
+            arr[maxIndex] = temp;
+        }
+    }
+
+    public static void heapSOrt(int arr[]){
+        //step : 1 : build maxHeap
+        int n = arr.length;
+        for (int i = n/2; i >= 0; i--) {
+            maxHeapify(arr, i, n);
+        }
+
+        //step 2 push the largest at the end 
+
+        for (int i = n - 1; i > 0; i--) {
+            int temp = arr[0];
+            arr[0] = arr[i];
+            arr[i] = temp;
+
+            maxHeapify(arr, 0, i);
+        }
+    }
+
     public static void main(String[] args) {
         // Create a new Min-Heap instance.
         Heap heap = new Heap();
